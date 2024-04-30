@@ -78,13 +78,13 @@ describe('RadioComponent', () => {
           return radio.name.includes('t')
         })
       })
-      const liArray = fixture.nativeElement.querySelectorAll('li');
       const button = fixture.nativeElement.querySelector('button')
       // const input = fixture.debugElement.query(By.css('input'))
       // input.triggerEventHandler('keyup', 'teletaxi')
       // component.inputValue="8";
       button.dispatchEvent(new Event('click'));
       fixture.detectChanges();
+      const liArray = fixture.nativeElement.querySelectorAll('li');
 
       expect(liArray.length).toBeGreaterThan(0)
       // expect (radioStationSpy).toHaveBeenCalledTimes(1)
